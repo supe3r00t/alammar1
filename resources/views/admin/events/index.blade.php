@@ -51,8 +51,8 @@
                                     <td><a class="btn btn-light" href="{{route('events.show', $event)}}">{{$event->title}}</a></td>
                                     <td ><a class="btn btn-outline-dark" href="{{route('admin.events.show', $event)}}">{{$event->max_guests}}</a></td>
                                 <td class="">{{$event->type}}</td>
-                                <td class="btn btn- ">{{$event->start_date}}</td>
-                                <td class="">{{$event->end_date}}</td>
+                                <td class="btn btn- ">{{date('d-m-Y', strtotime($event->start_date))}}</td>
+                                <td class="">{{date('d-m-Y', strtotime($event->end_date))}}</td>
                                 <td class="btn btn-secondary  disabled">{{$event->max_guests}}</td>
                                 <td><a class="btn btn-primary btn-sm" href="{{route('admin.events.edit', $event->id)}}">{{ __('Edit') }}</a></td>
                                 <td><a href="javascript:void(0)" class="btn btn-danger btn-sm" onclick="if (confirm('هل أنت متاكد من الحذف')) { document.getElementById('delete-{{$event->id}}').submit();} else { return false;} ">{{ __('Delete') }}</a>
