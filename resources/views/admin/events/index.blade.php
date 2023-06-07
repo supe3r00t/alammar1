@@ -34,9 +34,7 @@
                         </tr>
                         </thead>
                         <tbody class="container">
-                        <?php $i=0 ?>
-                        @foreach($events as $index=>$event)
-                            <?php $i++ ?>
+                        @foreach($events as $i=>$event)
                             <tr>
 
 
@@ -47,7 +45,7 @@
                             <tr>
                                 <div class="btn-group col-auto">
 
-                                <td class="btn btn-dark" >{{ $index+1 }}-</td>
+                                <td class="btn btn-dark" >{{ $i+1 }}-</td>
                                     <td><a class="btn btn-light" href="{{route('events.show', $event)}}">{{$event->title}}</a></td>
                                     <td ><a class="btn btn-outline-dark" href="{{route('admin.events.show', $event)}}">{{ $event->guests->count()}}</a></td>
                                 <td class="">{{$event->type}}</td>
