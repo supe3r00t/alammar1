@@ -33,7 +33,8 @@ class AdminController extends Controller
     }
     public function create(){
 
-        return view('admin.events.create');
+        $event = Event::all();
+        return view('admin.events.create',compact('event'));
     }
 
     public function store(Request $request )

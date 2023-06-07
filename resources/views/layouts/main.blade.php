@@ -20,6 +20,7 @@
 <link rel="stylesheet" media="all" href="https://www.mu.edu.sa/modules/contrib/bootstrap_paragraphs/css/bootstrap-paragraphs-carousel.min.css?ruc2vs" />
 <link rel="stylesheet" media="all" href="https://www.mu.edu.sa/sites/default/files/css/css_hWxEGz9C_N2JuydXSFpaESwI7sTmHOxkVH6Dm9uVC_Y.css" />
 <link rel="stylesheet" media="all" href="https://www.mu.edu.sa/sites/default/files/css/css_0GJXapPJwhDzDQY5fiROC1SPsI6lIVp_z-lJlppMus0.css" />
+    @livewireStyles
 </head>
 
 
@@ -297,6 +298,7 @@
 </div>
 <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"ar\/","currentPath":"node\/167036","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"ar"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"user":{"uid":0,"permissionsHash":"584438c054edc291f1faecb59ec0cf9245fa11f4d4ae9adfe650af4b2b1cd806"}}</script>
 <script src="https://www.mu.edu.sa/sites/default/files/js/js_-LAqCJ9wo0YdyCMJCt4iBbrRSFAppvNV0PaYVfiRsqY.js"></script>
+@livewireScripts
 </body>
 </html>
 

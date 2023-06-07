@@ -54,8 +54,14 @@
                                 <td class="btn btn- ">{{$event->start_date}}</td>
                                 <td class="">{{$event->end_date}}</td>
                                 <td class="btn btn-secondary  disabled">{{$event->max_guests}}</td>
-                                <td><a class="btn btn-outline-dark" href="{{route('admin.events.edit', $event->id)}}">{{ __('Edit') }}</a></td>
-                                <td><a class="btn btn-outline-danger" href="{{route('admin.events.delete', $event)}}" @method('delete'){{ __('Delete') }}</a></td>
+                                <td><a class="btn btn-primary btn-sm" href="{{route('admin.events.edit', $event->id)}}">{{ __('Edit') }}</a></td>
+                                <td><a href="javascript:void(0)" class="btn btn-danger btn-sm" onclick="if (confirm('هل أنت متاكد من الحذف')) { document.getElementById('delete-{{$event->id}}').submit();} else { return false;} ">{{ __('Delete') }}</a>
+                                <form action="{{route('admin.events.delete',$event->id)}}" method="post" id="delete-{{$event->id}}" style="display: none;">
+                                    @csrf
+                                    @method('delete')
+                                </form>
+                                </td>
+
 
 
 
@@ -70,6 +76,7 @@
                         </tbody>
                     </table>
                 </div>
+
         </div>
         </div>
                 </div>

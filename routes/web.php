@@ -52,7 +52,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
     Route::get('guests/{event}', [\App\Http\Controllers\Admin\AdminController::class, 'guest'])->name('events.guest');
     Route::get('events/{id}/edit', [\App\Http\Controllers\Admin\AdminController::class, 'edit'])->name('events.edit');
     Route::patch('events/{event}', [\App\Http\Controllers\Admin\AdminController::class, 'update'])->name('events.update');
-    Route::get('events/delete/{id}',[\App\Http\Controllers\Admin\AdminController::class,'delete'])->name('events.delete');
+    Route::delete('events/delete/{id}',[\App\Http\Controllers\Admin\AdminController::class,'delete'])->name('events.delete');
     Route::post('events/{event},', [\App\Http\Controllers\Admin\AdminController::class, 'store'])->name('events.store');
     Route::post('events/{workshop},', [\App\Http\Controllers\Admin\AdminController::class, 'store'])->name('events.store');
 });
