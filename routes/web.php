@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\OldeventController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WorkshopController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,7 @@ Route::post('/events/{event}/signup', [EventController::class, 'signup'])
 
 
 
+Route::get('/oldevents', [OldeventController::class, 'index'])->name('oldindex');
 
 
 

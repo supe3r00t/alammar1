@@ -11,7 +11,7 @@
 
                 <a class="btn btn-outline-dark" href="{{route('admin.events.create')}}">{{ __('Create') }}</a>
 
-
+            <a class="btn btn-outline-danger" href="{{route('oldindex')}}">لقاءات السابقة</a>
 
 
                 <h1>{{__('Work meetings')}}</h1>
