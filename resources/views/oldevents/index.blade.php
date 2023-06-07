@@ -8,7 +8,7 @@
             <div class="card">
                 <h1>{{__('لقائات المنتهية')}}</h1>
                 @foreach($groupeddates as $date =>$dates)
-                    <h3>{{date('d-m-Y', strtotime($date))}}</h3>
+                    <pre>{{date('d-m-Y', strtotime($date))}}</pre>
                 @foreach($dates as $date)
 
 
