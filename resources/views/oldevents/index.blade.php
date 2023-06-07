@@ -7,11 +7,13 @@
         <div class="">
             <div class="card">
                 <h1>{{__('لقائات المنتهية')}}</h1>
+                @foreach($groupeddates as $date =>$dates)
+                    <h3>{{date('d-m-Y', strtotime($date))}}</h3>
                 @foreach($dates as $date)
 
 
                     <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{{ date('d-m-Y', strtotime($date->start_date)) }}</li>
+{{--                    <li class="list-group-item">{{ date('d-m-Y', strtotime($date->start_date)) }}</li>--}}
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><b>  <p>  اسم لقاء :  {{$date->title}}   نوع لقاء: {{$date->type}}  عدد الزوار : {{$date->max_guests}}</b></p></li>
                         <li class="list-group-item"></li>
@@ -21,6 +23,7 @@
 
                                 @endforeach
 
+                @endforeach
                 </div>
 
             </div>

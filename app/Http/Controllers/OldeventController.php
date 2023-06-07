@@ -15,7 +15,11 @@ class OldeventController extends Controller
 
         $dates = DB::table('events')->where('end_date', '<=', now())->get();
 
-        return view('oldevents.index', compact('dates'));
+//        $olds =Event::orderBy('end_date','desc')->get()->groupBy('start_date');
+
+        $groupeddates = $dates->groupBy('end_date');
+
+        return view('oldevents.index', compact('dates','groupeddates'));
     }
     /**
      * Show the form for creating a new resource.
