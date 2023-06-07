@@ -22,7 +22,7 @@
                         <tr class="col">
                             <th scope="col"># </th>
                             <th scope="col"> {{__('Title event')}} </th>
-                            <th scope="col">{{__('View guest')}} </th>
+                            <th scope="col">{{__('View Register guests')}} </th>
                             <th scope="col">{{__('Event type')}}</th>
                             <th scope="col">{{__('Registration start date')}}</th>
                             <th scope="col">{{__('Registration end date')}}</th>
@@ -35,7 +35,7 @@
                         </thead>
                         <tbody class="container">
                         <?php $i=0 ?>
-                        @foreach($events as $event)
+                        @foreach($events as $index=>$event)
                             <?php $i++ ?>
                             <tr>
 
@@ -47,9 +47,9 @@
                             <tr>
                                 <div class="btn-group col-auto">
 
-                                <td class="btn btn-dark" >{{$i}}-</td>
+                                <td class="btn btn-dark" >{{ $index+1 }}-</td>
                                     <td><a class="btn btn-light" href="{{route('events.show', $event)}}">{{$event->title}}</a></td>
-                                    <td ><a class="btn btn-outline-dark" href="{{route('admin.events.show', $event)}}">{{$event->max_guests}}</a></td>
+                                    <td ><a class="btn btn-outline-dark" href="{{route('admin.events.show', $event)}}">{{ $event->guests->count()}}</a></td>
                                 <td class="">{{$event->type}}</td>
                                 <td class="btn btn- ">{{date('d-m-Y', strtotime($event->start_date))}}</td>
                                 <td class="">{{date('d-m-Y', strtotime($event->end_date))}}</td>
@@ -66,6 +66,7 @@
 
 
                                 @endforeach
+
 
                             </tr>
 

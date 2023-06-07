@@ -12,7 +12,8 @@
                 @foreach($dates as $date)
 
 
-                    <ul class="list-group list-group-flush">
+
+                        <ul class="list-group list-group-flush">
 {{--                    <li class="list-group-item">{{ date('d-m-Y', strtotime($date->start_date)) }}</li>--}}
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><b>  <p>  اسم لقاء :  {{$date->title}}   نوع لقاء: {{$date->type}}  عدد الزوار : {{$date->max_guests}}</b></p></li>

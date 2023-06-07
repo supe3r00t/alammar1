@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\GuestsController;
 use App\Http\Controllers\OldeventController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WorkshopController;
@@ -20,7 +21,7 @@ Route::get('/events/workshop', [WorkshopController::class, 'workshops'])
 Route::get('/events/event/{event}', [EventController::class, 'show'])
     ->name('events.show');
 
-Route::post('/events/{event}/signup', [EventController::class, 'signup'])
+Route::post('/events/{event}/signup', [GuestsController::class, 'store'])
     ->name('events.signup');
 
 

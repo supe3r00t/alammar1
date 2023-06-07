@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Event;
+use App\Models\Guest;
 use App\Models\Work;
 use App\Models\Workshop;
 use Illuminate\Http\Request;
@@ -15,8 +16,10 @@ class AdminController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function index(Event $event){
         $events = Event::all();
+
+
         return view('admin.events.index', compact('events'));
     }
 

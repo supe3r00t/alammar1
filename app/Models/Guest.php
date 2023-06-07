@@ -11,7 +11,10 @@ class Guest extends Model
     use HasFactory;
     protected $fillable = ['title', 'name', 'phone'];
 
+
     public function event(){
         return $this->belongsTo(Event::class);
     }
+
+
 }
