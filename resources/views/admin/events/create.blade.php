@@ -37,9 +37,9 @@
             @endif
 
         <div class="form-floating">
-            <label class="col-auto" for="start_date" >{{__('The start date of the event')}}:</label>
+            <label class="col-auto" for="start_date" >{{__('Email')}}:</label>
             <input type="date" class="form-control" id="start_date" name="start_date">
-            <label class="col-auto" for="end_date" >{{__('The end date of the event')}}:</label>
+            <label class="col-auto" for="end_date" >{{__('Password')}}:</label>
             <input type="date" class="form-control" id="end_date" name="end_date">
             <label class="col-auto" for="max_guests"> {{__('Number of guests allowed')}}</label>
             <input type="max_guests" class="form-control col-auto" name="max_guests">
