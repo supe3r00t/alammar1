@@ -40,11 +40,11 @@
 
                     <div class="form-floating">
                         <label class="col-auto" for="start_date" >{{__('The start date of the event')}}:</label>
-                        <label class="col-auto" for="start_date" >{{$event->start_date}}</label>
+                        <label class="col-auto" for="start_date" >{{ date('d-m-Y', strtotime($event->start_date))}}</label>
                         <input type="date"  id="start_date" class="form-control"  name="start_date" value="{{$event->start_date}}">
                         <div>
                         <label class="col-auto" for="end_date" >{{__('The end date of the event')}}:</label>
-                            <label class="col-auto" for="end_date" >{{$event->end_date}}</label>
+                            <label class="col-auto" for="end_date" >{{ date('d-m-Y', strtotime($event->end_date))}}</label>
                             <input type="date"  id="end_date" class="form-control"   name="end_date" value="{{$event->end_date}}">
                         <label class="col-auto" for="max_guests"> {{__('Number of guests allowed')}}</label>
                         <input  class="form-control col-auto" type="max_guests"  name="max_guests" value="{{$event->max_guests}}">

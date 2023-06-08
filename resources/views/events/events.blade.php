@@ -36,8 +36,8 @@
                         <a class="btn btn-secondary" href="{{route('events.show', $event)}}" role="button">{{$i}}</a>
                     </td>
                     <td>{{$event->title}}</td>
-                    <td>{{$event->start_date}}</td>
-                    <td>{{$event->end_date}}</td>
+                    <td>{{ date('Y-m-d', strtotime($event->start_date))}}</td>
+                    <td>{{ date('Y-m-d', strtotime($event->end_date))}}</td>
 
 
                 </tr>

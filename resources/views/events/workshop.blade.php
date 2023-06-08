@@ -36,8 +36,8 @@
                         <a class="btn btn-secondary" href="{{route('workshops.show', $workshop)}}" role="button">{{$i}}</a>
                         </td>
                         <td>{{$workshop->title}}</td>
-                        <td>{{$workshop->start_date}}</td>
-                        <td>{{$workshop->end_date}}</td>
+                        <td>{{ date('Y-m-d', strtotime($workshop->start_date))}}</td>
+                        <td>{{ date('Y-m-d', strtotime($workshop->end_date))}}</td>
 
 
                     </tr>
