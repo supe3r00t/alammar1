@@ -61,6 +61,7 @@ class EventController extends Controller
 
 
 
+
     public function events(Event $events)
     {
 

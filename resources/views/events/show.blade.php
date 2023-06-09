@@ -21,10 +21,9 @@
 
         <ul class="list-group list-group-flush">
             <li class="list-group-item"> <h2>{{__('Meet name')}}:  {{$event->title}}</h2></li>
-            <li class="list-group-item"> {{__('The start date of the event')}}:  {{$event->start_date}}</li>
-            <li class="list-group-item"> {{__('The end date of the event')}}:  {{$event->end_date}}</li>
-            <li class="list-group-item"> {{__('Number of guests allowed')}}:  {{$event->max_guests}}</li>
-
+            <li class="list-group-item"> {{__('The start date of the event')}}:  {{date('d-m-Y', strtotime($event->start_date))}}</li>
+            <li class="list-group-item"> {{__('The end date of the event')}}:  {{date('d-m-Y', strtotime($event->end_date))}}</li>
+            <li class="list-group-item"> {{__('Number of guests allowed')}}:  {{$event->max_guests}} - {{__('Number guests')}}:  {{$event->guests->count()}}</li>
         </ul>
 
 
