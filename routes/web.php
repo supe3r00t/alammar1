@@ -4,6 +4,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\GuestsController;
 use App\Http\Controllers\OldeventController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\WorkshopController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,8 @@ Route::get('/events/event/{event}', [EventController::class, 'show'])
 
 Route::post('/events/{event}/signup', [GuestsController::class, 'store'])
     ->name('events.signup');
+Route::get('/search/', [SearchController::class, 'index'])
+    ->name('search.index');
 
 
 

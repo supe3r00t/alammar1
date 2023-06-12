@@ -4,11 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+use Laravel\Scout\Searchable;
 
 class Guest extends Model
 {
 
-    use HasFactory;
+
+    use HasApiTokens, HasFactory, Notifiable, Searchable;
     protected $fillable = ['title', 'name', 'phone'];
 
 
@@ -17,4 +21,13 @@ class Guest extends Model
     }
 
 
+
+
+public function toSearchableArray()
+{
+    return [
+        'name' => $this->name,
+        'phone' => $this->phone
+    ];
+}
 }

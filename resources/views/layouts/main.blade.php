@@ -182,7 +182,8 @@
                 </div>
             </div>
             <div class="search-form-wrapper">
-                <form action="https://www.mu.edu.sa/ar/search" method="GET" name="Search" title="إبحث في الموقع">
+
+                <form action="{{route('search.index')}}" method="GET" name="Search" title="إبحث في الموقع">
                     <div class="toggle__search collapse" id="toggle__search">
                         <input name="search" type="search" class="form-control">
                         <button class="btn">البحث</button>

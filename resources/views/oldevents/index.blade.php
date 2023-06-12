@@ -15,7 +15,7 @@
 
 
                         <li class="list-group-item"><b> <p>   {{$i+1 }} -  اسم لقاء : {{$date->title}}   |   نوع لقاء:  {{$date->type}}  | عدد الزوار : {{$date->max_guests}}</b></p></li>
-        
+
 
 
                                 @endforeach
