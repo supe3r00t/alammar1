@@ -31,7 +31,27 @@ class AuthenticatedSessionController extends Controller
 
         return back()->with('success','تم تسجيل دخول!');
 
-//        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->intended(RouteServiceProvider::HOME);
+    }
+
+
+    public function login(Request $request){
+
+        $validatedData = $request->validate([
+
+            'email'=>'required',
+            'password'=>'required',
+
+        ]);
+
+        if (!auth()->attempt($validatedData)){
+
+            return response()->json(['message'=>'invalid login details'],401);
+        }
+
+        $accessToken =auth()->user()->createToken('authToken')->accessToken;
+
+        return ['user'=> auth()->user(), 'access_token' => $accessToken];
     }
 
     /**

@@ -22,7 +22,7 @@ class EventController extends Controller
         $workshops = Event::where('start_date', '<=', $now)
             ->where('end_date', '>=', $now)->where('type', 'workshop')->get();
 
-        return view('events.index', compact('events', 'workshops'));
+        return view('events.events', compact('events', 'workshops'));
     }
 
     public function signup(Event $event)

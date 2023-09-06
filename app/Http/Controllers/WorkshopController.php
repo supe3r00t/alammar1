@@ -27,7 +27,7 @@ class WorkshopController extends Controller
             && $workshop->end_date >= $now) {
             return view('events.show', compact('workshop'));
         } else {
-            return redirect()->route('welcome');
+            return back();
         }
     }
 

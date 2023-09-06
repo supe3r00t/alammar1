@@ -16,11 +16,10 @@
 <link rel="alternate" hreflang="ar" href="https://www.mu.edu.sa/ar" />
     <title>@yield('title') | Majmaah University</title>
 <link rel="stylesheet" media="all" href="https://www.mu.edu.sa/sites/default/files/css/css_Sl4LRMNAKgKC73I4WttbKaFTfRNzrtOxiNi3J1AifR8.css" />
-<link rel="stylesheet" media="all" href="https://www.mu.edu.sa/modules/contrib/bootstrap_paragraphs/css/bootstrap-paragraphs-image.min.css?ruc2vs" />
-<link rel="stylesheet" media="all" href="https://www.mu.edu.sa/modules/contrib/bootstrap_paragraphs/css/bootstrap-paragraphs-carousel.min.css?ruc2vs" />
+<link rel="stylesheet" media="all" href="https://www.mu.edu.sa/modules/contrib/bootstrap_paragraphs/css/bootstrap-paragraphs-image.min.css?s0cplm" />
+<link rel="stylesheet" media="all" href="https://www.mu.edu.sa/modules/contrib/bootstrap_paragraphs/css/bootstrap-paragraphs-carousel.min.css?s0cplm" />
 <link rel="stylesheet" media="all" href="https://www.mu.edu.sa/sites/default/files/css/css_hWxEGz9C_N2JuydXSFpaESwI7sTmHOxkVH6Dm9uVC_Y.css" />
-<link rel="stylesheet" media="all" href="https://www.mu.edu.sa/sites/default/files/css/css_0GJXapPJwhDzDQY5fiROC1SPsI6lIVp_z-lJlppMus0.css" />
-    @livewireStyles
+<link rel="stylesheet" media="all" href="https://www.mu.edu.sa/sites/default/files/css/css_DhBKFVJmjErOiRE_cyx7adJ5jBiJ-9DhSaCo22tgmL8.css" />
 </head>
 
 
